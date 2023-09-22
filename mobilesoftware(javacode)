@@ -1,0 +1,182 @@
+1.
+public class Main {
+    public static void main(String[] args) {
+        int a = 5;
+        double b = 0.4;
+        
+        double sum = a + b;
+        double difference = a - b;
+        double product = a * b;
+        double quotient = a / b;
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+    }
+}
+------------------------------------------------------------------
+2.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите первое число: ");
+        int number1 = scanner.nextInt();
+        
+        System.out.print("Введите второе число: ");
+        int number2 = scanner.nextInt();
+        
+        System.out.print("Введите третье число: ");
+        int number3 = scanner.nextInt();
+        
+        int product = number1 * number2 * number3;
+        
+        System.out.println("Произведение трех чисел: " + product);
+    }
+}
+------------------------------------------------------------------
+3.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+
+        System.out.println("The number is " + number);
+    }
+}
+------------------------------------------------------------------
+4.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int length = scanner.nextInt();
+        int width = scanner.nextInt();
+
+        int area = length * width;
+        int perimeter = 2 * (length + width);
+
+        System.out.println("Area: " + area);
+        System.out.println("Perimeter: " + perimeter);
+    }
+}
+------------------------------------------------------------------
+5.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        int nextEvenNumber = n + (2 - (n % 2));
+
+        System.out.println(nextEvenNumber);
+    }
+}
+------------------------------------------------------------------
+6.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();   // рубли
+        int b = scanner.nextInt();   // копейки
+        int n = scanner.nextInt();   // количество пирожков
+
+        int totalRubles = a * n;
+        int totalCents = b * n;
+
+        totalRubles += totalCents / 100;  // добавляем рубли, полученные от целых копеек
+        totalCents %= 100;                // оставляем только остаток от деления на 100
+
+        System.out.println("Заплатите " + totalRubles + " рублей и " + totalCents + " копеек");
+    }
+}
+------------------------------------------------------------------
+7.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите положительное натуральное число: ");
+        int number = scanner.nextInt();
+        
+        int lastDigit = number % 10;
+        
+        System.out.println("Последняя цифра числа: " + lastDigit);
+    }
+}
+------------------------------------------------------------------
+8.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+
+        int digit1 = number / 100;           // первая цифра
+        int digit2 = (number / 10) % 10;     // вторая цифра
+        int digit3 = number % 10;            // третья цифра
+
+        int sum = digit1 + digit2 + digit3;
+
+        System.out.println("Сумма цифр равна: " + sum);
+    }
+}
+------------------------------------------------------------------
+9.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите скорость движения (в км/ч): ");
+        int v = scanner.nextInt();
+        
+        System.out.print("Введите время пути (в часах): ");
+        int t = scanner.nextInt();
+        
+        int distance = v * t;
+        int mark = distance % 109;
+        
+        if (mark < 0) {
+            mark += 109;
+        }
+        
+        System.out.println("Вася остановится на отметке: " + mark);
+    }
+}
+------------------------------------------------------------------
+10.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите высоту шеста (в метрах): ");
+        int h = scanner.nextInt();
+        
+        System.out.print("Введите расстояние, пройденное за день (в метрах): ");
+        int a = scanner.nextInt();
+        
+        System.out.print("Введите расстояние, спускаемое за ночь (в метрах): ");
+        int b = scanner.nextInt();
+        
+        int days = (h - b - 1) / (a - b) + 1;
+        
+        System.out.println("Улитка достигнет вершины шеста на день: " + days);
+    }
+}
+------------------------------------------------------------------
